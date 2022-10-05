@@ -255,12 +255,13 @@ use PHPMailer\PHPMailer\Exception;
 			$mail->addAddress($email, $nombre);     //Add a recipient
 			$mail->Subject = $asunto;
 			$mail->Body    = $cuerpo;
+			$mail->isHTML(true);
 			if($mail->send()){
 			echo"
                     <script type='text/javascript'>
                     Swal.fire({
                     title:'Exito',
-                    text:'Registro exitoso',
+                    text:'Registro exitoso, correo de registro enviado',
                     icon : 'success',
                     }).then((result)=>{
                         if(result.value){
