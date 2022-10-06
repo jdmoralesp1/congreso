@@ -4,7 +4,7 @@ $con = new Conexion();
 $mysqli=$con->conectar();
 $consulta = "SELECT u.id_u, u.nomb_u, u.apel_u, u.univ_u, u.correo_u, t.telefono, u.clave_u
             FROM usuarios u, telefonousuarios t
-            where u.id_u=t.idUsu and u.estado_u=1";
+            where u.id_u=t.idUsu ";
 $resultado = $mysqli->query($consulta);
 header("Content-Type: application/vnd.ms-excel; charset=UTF-8");
 header("Content-Disposition: attachement; filename=Usuarios.xls");

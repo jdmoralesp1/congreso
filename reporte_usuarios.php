@@ -42,7 +42,7 @@ function Footer()
 
 $consulta = "SELECT u.id_u, u.nomb_u, u.apel_u, u.univ_u, u.correo_u, t.telefono, u.clave_u
             FROM usuarios u, telefonousuarios t
-            where u.id_u=t.idUsu and u.estado_u=1";
+            where u.id_u=t.idUsu and";
 $resultado = $mysqli->query($consulta);
 
 $pdf = new PDF();

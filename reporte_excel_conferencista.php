@@ -3,8 +3,7 @@ require('conexion.inc.php');
 $con = new Conexion();
 $mysqli=$con->conectar();
 $consulta = "SELECT *
-            FROM conferencista
-            where estado_co=1";
+            FROM conferencista";
 $resultado = $mysqli->query($consulta);
 header("Content-Type: application/vnd.ms-excel; charset=iso-8859-1");
 header("Content-Disposition: attachement; filename=Conferencistas.xls");
