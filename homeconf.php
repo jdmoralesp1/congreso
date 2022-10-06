@@ -54,9 +54,15 @@ if ($_SESSION['usuario_admin']) {
                             <option value="1">1</option>
                             <?php
                             for($i=2;$i<24;$i++){
-                                ?>
-                                <option value="<?php echo $i; ?>"><?php echo $i ?></option>
-                                <?php
+                                if($i<9 && $i>1){
+                                    ?>
+                                    <option value="0<?php echo $i; ?>"><?php echo $i ?></option>
+                                    <?php
+                                } else{
+                                    ?>
+                                    <option value="<?php echo $i; ?>"><?php echo $i ?></option>
+                                    <?php 
+                                }
                             }
                             ?>
                         </select>

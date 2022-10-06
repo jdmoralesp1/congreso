@@ -71,7 +71,7 @@
       $sql = "SELECT c.id_confer,c.nomb_c, cf.nomb_conf, c.fecha_c,c.hora_c, c.link_c 
       FROM conferencia c, usuarios u, conferencista cf, conferencia_has_usuarios coh
       where c.id_confer=coh.Conferencia_id_confer and '$correo'=u.correo_u and coh.Usuarios_id_u=u.id_u 
-      and coh.Conferencia_id_conferencista=cf.id_conf ORDER BY c.fecha_c;";
+      and coh.Conferencia_id_conferencista=cf.id_conf ORDER BY c.fecha_c asc, c.hora_c asc;";
       $res = mysqli_query(Conectar::con(), $sql); //aplicar herencia 
       while ($row = mysqli_fetch_assoc($res)) {
         $this->conf[] = $row;

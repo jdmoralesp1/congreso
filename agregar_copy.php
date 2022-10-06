@@ -8,7 +8,7 @@ if ($_SESSION['correo_u']) {
 <?php
 $correo=$_SESSION['correo_u'];
 $con = mysqli_connect("localhost", "root", "", "congreso_");
-$query = "select fecha_c,hora_c from conferencia group by fecha_c,hora_c ORDER by fecha_c;";
+$query = "select fecha_c,hora_c from conferencia group by fecha_c,hora_c ORDER by fecha_c asc, hora_c asc;";
 $query_run  = mysqli_query($con, $query);
 $k=0;
 foreach($query_run as $row){
