@@ -153,6 +153,7 @@ if ($_SESSION['usuario_admin']) {
                             <?php
                             }
                             ?>
+                            <option value="1">1 - Por asignar</option>
                         </select>
                     </div>
                     <div class="col-md-6 mt-3" style="text-align: center;">
