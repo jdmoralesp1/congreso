@@ -46,7 +46,7 @@
     {
       $sql = "SELECT c.id_confer,c.nomb_c, cf.nomb_conf, c.fecha_c,c.hora_c, c.estado_c, c.link_c 
         FROM conferencia c, conferencista cf 
-        where c.id_conferencista=cf.id_conf order by c.fecha_c";
+        where c.id_conferencista=cf.id_conf order by c.fecha_c asc, c.hora_c asc";
       $res = mysqli_query(Conectar::con(), $sql); //aplicar herencia 
       while ($row = mysqli_fetch_assoc($res)) {
         $this->conf[] = $row;
